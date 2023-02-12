@@ -9,34 +9,26 @@ app.use(express.static('public'))
 
 
 
-
-
-
-
 app.get("/", (req, res) => {
-  res.redirect("/alihaasan");
+  res.redirect("/builds");
  
 });
 
-app.get("/alihaasan", (req, res) => {
-  res.send("wellcome ♥ ");
+app.get("/builds", (req, res) => {
+  res.send("welcome ♥ ");
+
 });
 
-app.get("/html", (req, res) => {
+
+app.get("/ejs", (req, res) => {
   res.render("index")
 });
-
-
-
 
 
 //  404 
 app.use((req, res) => {
   res.status(404).send("Sorry can't find that!");
 });
-
-
-
 
 
 
