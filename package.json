@@ -1,6 +1,52 @@
 {
+
+
+
   "dependencies": {
+
+
+
+    "connect-livereload": "^0.6.1",
+
+
+
     "ejs": "^3.1.8",
-    "express": "^4.17.1"
+
+
+
+    "express": "^4.17.1",
+
+
+
+    "liveload": "^0.3.3",
+
+
+
+    "livereload": "^0.9.3"
+
+
+
+  },
+
+
+
+  "scripts": {
+
+
+
+    "start": "node app.js",
+
+
+
+    "watch": "nodemon --ext js,ejs --ignore public"
+
+
+
   }
+
+
+
 }
+
+
+

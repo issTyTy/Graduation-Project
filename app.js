@@ -6,6 +6,21 @@ const port = 5000;
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
+//for auto refresh
+const path = require("path");
+const livereload = require("livereload");
+const liveReloadServer = livereload.createServer();
+liveReloadServer.watch(path.join(__dirname, 'public'));
+ 
+ 
+const connectLivereload = require("connect-livereload");
+app.use(connectLivereload());
+ 
+liveReloadServer.server.once("connection", () => {
+  setTimeout(() => {
+    liveReloadServer.refresh("/");
+  }, 100);
+}); 
 
 
 
@@ -20,7 +35,7 @@ app.get("/builds", (req, res) => {
 });
 
 
-app.get("/ejs", (req, res) => {
+app.get("/html", (req, res) => {
   res.render("index")
 });
 
