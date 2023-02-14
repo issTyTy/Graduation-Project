@@ -23,7 +23,20 @@ liveReloadServer.server.once("connection", () => {
 }); 
 
 
+// mongoose connection
+const mongoose = require('mongoose');
+mongoose.set('strictQuery', false);
+ mongoose.connect("mongodb+srv://TyTy:mody2000@cluster0.hwyb70a.mongodb.net/all-data?retryWrites=true&w=majority")
+  .then( result => {
+    app.listen(3000);
+  })
+  .catch( err => {
+    console.log(err);
+  }); 
 
+
+
+//HTTP routing
 app.get("/", (req, res) => {
   res.redirect("/builds");
  
