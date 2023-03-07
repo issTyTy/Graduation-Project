@@ -37,25 +37,55 @@ mongoose.set('strictQuery', false);
 
 
 //HTTP routing
+
+
 app.get("/", (req, res) => {
-  res.redirect("/builds");
- 
-});
-
-app.get("/builds", (req, res) => {
-  res.send("welcome ♥ ");
-
-});
-
-
-app.get("/html", (req, res) => {
   res.render("index")
 });
 
+app.get("/products/cpu/", (req, res) => {
+  res.render("Cpu")
+});
 
-//  404 
+app.get("/products/cpu-cooler/", (req, res) => {
+  res.render("Cpu Cooler")
+});
+
+app.get("/products/motherboard/", (req, res) => {
+  res.render("Motherboards")
+});
+
+app.get("/products/memory/", (req, res) => {
+  res.render("Memory")
+});
+
+app.get("/products/internal-hard-drive/", (req, res) => {
+  res.render("Storage")
+});
+
+app.get("/products/video-card/", (req, res) => {
+  res.render("Video Card")
+});
+
+app.get("/products/case/", (req, res) => {
+  res.render("Cases")
+});
+
+app.get("/products/power-supply/", (req, res) => {
+  res.render("Power Supply")
+});
+
+app.get("/products/os/", (req, res) => {
+  res.render("Operating System")
+});
+
+app.get("/products/monitor/", (req, res) => {
+  res.render("Monitor")
+});
+
+//  404 Erorr
 app.use((req, res) => {
-  res.status(404).send("Sorry can't find that!");
+  res.status(404).send("Whoops cant find that!");
 });
 
 
