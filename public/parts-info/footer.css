@@ -1,0 +1,18 @@
+footer{
+    background-color: black;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    color: white;
+}
+footer ol li{
+    list-style: none;
+}
+.sub-title{
+    margin-bottom: 15px;
+}
+.sub-title:hover{
+    color: rgb(194, 138, 17);
+}
+li a:hover{
+    color: rgb(226, 162, 25);
+}

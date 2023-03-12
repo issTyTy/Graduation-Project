@@ -1,0 +1,32 @@
+.nav2{
+    background-color: black;
+    display: flex;
+}
+.nav2 button{
+    padding: 20px;
+    font-weight: 700;
+    font-size: large;
+    color: white;
+    background-color: black;
+    margin-right: -5px;
+    border: 1px;
+}
+.right ul{
+    list-style: none;
+    align-items: center;
+    padding-right: 6px;
+}
+.lol {
+    display: inline-block;
+    margin-right: 10px;
+}
+.nav2 button:hover{
+    color: rgb(226, 162, 25);
+    transition-duration: 0.2s;
+}
+.right a:hover{
+    color: rgb(226, 162, 25);
+}
+.nav2 th button:hover{
+    background-color: rgb(59, 59, 59);
+}

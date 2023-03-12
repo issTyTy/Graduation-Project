@@ -2,13 +2,16 @@
 
 const express = require("express");
 const app = express();
+const path = require("path");
 const bcrypt = require("bcrypt");
 const passport = require("passport");
 const initializePassport = require("./passport-config");
 const port = 4000;
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-app.use(express.json());
+app.use(express.json());``
+app.use(express.static(path.join('public')));
+
 
 const users = [];
 
@@ -38,7 +41,6 @@ app.post("/register", async (req, res) => {
 });
 
 //for auto refresh
-const path = require("path");
 const livereload = require("livereload");
 const liveReloadServer = livereload.createServer();
 liveReloadServer.watch(path.join(__dirname, "public"));
@@ -126,6 +128,10 @@ app.get("/about", (req, res) => {
 
 app.get("/contact", (req, res) => {
   res.render("contact");
+});
+
+app.get("/info", (req, res) => {
+  res.render("partsinfo.ejs");
 });
 
 //  404 Erorr
