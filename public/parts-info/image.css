@@ -1,0 +1,26 @@
+.content img{
+    width: 30vw;
+}
+.img-pc img{
+    width: 25vw;
+}
+.img-cpu img{
+    width: 13vw;
+    margin-left: 50px;
+}
+.img-motherbored img{
+    width: 20vw;
+}
+.img-ram img{
+    width: 18vw;
+}
+.img-fan img{
+    width: 20vw;
+}
+.img-case img{
+    width: 16vw;
+    margin-left: 40px;
+}
+.img-GraphicCard img{
+    width: 20vw;
+}

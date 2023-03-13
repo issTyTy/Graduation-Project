@@ -9,9 +9,9 @@ const initializePassport = require("./passport-config");
 const port = 4000;
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-app.use(express.json());``
-app.use(express.static(path.join('public')));
-
+app.use(express.json());
+``;
+app.use(express.static(path.join("public")));
 
 const users = [];
 
@@ -24,7 +24,6 @@ app.get("/test", (req, res) => {
 app.post("/register", async (req, res) => {
   const { name, email, password } = req.body;
   try {
-    console.log(req.body.password);
     const hashedPassword = await bcrypt.hash(password, 10);
     users.push({
       id: Date.now().toString(),
@@ -32,12 +31,11 @@ app.post("/register", async (req, res) => {
       email,
       password: hashedPassword,
     });
-    // res.redirect("/login")
     console.log(users);
-  } catch (e) {
+    res.redirect("/login");
+  } catch (err) {
     res.redirect("/register");
   }
-  res.json("ok");
 });
 
 //for auto refresh
@@ -55,18 +53,18 @@ liveReloadServer.server.once("connection", () => {
 });
 
 // mongoose connection
-const mongoose = require("mongoose");
-mongoose.set("strictQuery", false);
-mongoose
-  .connect(
-    "mongodb+srv://TyTy:mody2000@cluster0.hwyb70a.mongodb.net/all-data?retryWrites=true&w=majority"
-  )
-  .then((result) => {
-    app.listen(3000);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// const mongoose = require("mongoose");
+// mongoose.set("strictQuery", false);
+// mongoose
+//   .connect(
+//     "mongodb+srv://TyTy:mody2000@cluster0.hwyb70a.mongodb.net/all-data?retryWrites=true&w=majority"
+//   )
+//   .then((result) => {
+//     app.listen(3000);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 
 // HTTP routing
 

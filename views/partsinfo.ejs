@@ -5,25 +5,31 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>wikipedia</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href="parts-info/nav1.css">
-    <link rel='stylesheet' type="text/css" href="parts-info/nav2.css">
-    <link rel='stylesheet' type="text/css" href="parts-info/dropdown.css">
-    <link rel='stylesheet' type="text/css" href="parts-info/footer.css">
-    <link rel="stylesheet" type="text/css" href="parts-info/main.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='/parts-info/nav1.css'>
+    <link rel='stylesheet' type="text/css" href="/parts-info/nav2.css">
+    <link rel='stylesheet' type="text/css" href="/parts-info/dropdown.css">
+    <link rel='stylesheet' type="text/css" href="/parts-info/footer.css">
+    <link rel="stylesheet" type="text/css" href="/parts-info/main.css">
+    <link rel="stylesheet" type="text/css" href="/parts-info/image.css">
     <script src='main.js'></script>
 </head>
 <body>
     <div class="momo">
     <header>
         <div class="nav1">
-            <img class="logo" src="/parts-info/s.png" alt="logo">
+            <img class="logo" src="/s.png" alt="logo">
+            <nav>
+                <ul>
+                    <li><a href="/login">Log in</a></li>
+                    <li><a href="/register">Register</a></li>
+                </ul>
+            </nav>
         </div>
         <div class="nav2">
             <ul>
                 <li class="lol"><button>Builder</button></li>
                 <li class="lol"><button>Build Guide</button></li>
                 <li class="lol"><button>Completed Build</button></li>
-                <li class="lol"><button>Forums</button></li>
                 <li class="lol"><button class="bt">Browse Product</button>
                     <div class="dropdown">
                         <div>
@@ -85,31 +91,37 @@
                 </div>
                 </li>
             </ul>
+            
+            <div class="right">
+                <ul>
+                    <li><a href="#">Price Trends</a></li>
+                    <li><a href="#">Forums</a></li>
+                   
+                </ul>
             </div>
-        <div class="nav3">
-            <ul>
-                <li><a href="/login">Log in</a></li>
-                <li><a href="/register">Register</a></li>
-            </ul>
         </div>
 </header>
 <main>
     <h1>What is a PC</h1>
     <hr>
     <div class="content">
-<div><p>A computer is an electronic device that manipulates information, or data. It has the ability to store, retrieve,
-     and process data. You may already know that you can use a computer to type documents, send email, play games, 
-     and browse the Web.</p></div>
-<div><img src="/parts-info/img/pc.jpg" alt="img"></div>
+<div><p> A computer is a machine or device that performs processes, calculations and operations based on instructions provided by a software or hardware program. It has the ability to accept data (input), process it, and then produce outputs.
+
+    Computers can also store data for later uses in appropriate storage devices, and retrieve whenever it is necessary.
+    
+    Modern computers are electronic devices used for a variety of purposes ranging from browsing the web, writing documents, editing videos, creating applications, playing video games, etc.
+    
+    They are designed to execute applications and provide a variety of solutions by combining integrated hardware and software components.
+    .</p></div>
+<div class="img-pc"><img src="/parts-info/img/pc.png" alt="img"></div>
 </div>
 <hr>
 <h1>What is a CPU</h1>
 <hr>
 <div class="content">
-<div><p>A processor (CPU) is the logic circuitry that responds to and processes the basic instructions that drive 
-    a computer. The CPU is seen as the main and most crucial integrated circuitry (IC) chip in a computer, 
-    as it is responsible for interpreting most of computers commands.</p></div>
-<div><img src="/parts-info/img/cpu.png" alt="img"></div>
+<div><p>A processor (Central processing unit) is the brain of a computer, containing all the circuitry needed to process input, store data, and output results.
+    The CPU is constantly following instructions of computer programs that tell it which data to process and how to process it. Without a CPU, we could not run programs on a computer.</p></div>
+<div class="img-cpu"><img src="/parts-info/img/cpu.png" alt="img"></div>
 </div>
 <hr>
 <h1>What is a Motherboard</h1>
@@ -118,7 +130,7 @@
 <div><p>A motherboard is a printed circuit board (PCB) that creates a kind of backbone allowing a variety of components 
     to communicate, and that provides different connectors for components such as the central processing unit (CPU), 
     graphics processing unit (GPU),</p></div>
-<div><img src="/parts-info/img/mother-bored.png" alt="img"></div>
+<div class="img-motherbored"><img src="/parts-info/img/mother-bored.png" alt="img"></div>
 </div>
 <hr>
 <h1>What is a RAM</h1>
@@ -127,16 +139,26 @@
 <div><p>RAM (random access memory) is a computer's short-term memory, where the data that the processor is currently
      using is stored. Your computer can access RAM memory much faster than data on a hard disk, SSD, or other long-term 
      storage device, which is why RAM capacity is critical for system performance.</p></div>
-<div><img src="/parts-info/img/RAM.png" alt="img"></div>
+<div class="img-ram"><img src="/parts-info/img/ram.png" alt="img"></div>
 </div>
 <hr>
-<h1>What is a Hard Disk</h1>
+<h1>What is the storage</h1>
 <hr>
 <div class="content">
-<div><p>A computer hard disk drive (HDD) is a non-volatile data storage device. Non-volatile refers to storage devices 
-    that maintain stored data when turned off. All computers need a storage device, 
-    and HDDs are just one example of a type of storage device.</p></div>
-<div><img src="/parts-info/img/hard disk.png" alt="img"></div>
+<div><p>the storage i used to store data on a computer and there is different types of storage
+    <br>
+    <br>
+    1-A hard disk drive (HDD),<br> hard disk, hard drive, or fixed disk, is an electro-mechanical data 
+    storage device that stores and retrieves digital data using magnetic storage with one or more rigid <br>
+    <br>
+    2- A solid-state drive (SSD) is a solid-state storage device that uses integrated circuit assemblies to store data persistently, 
+    typically using flash memory, and functioning as secondary storage in the hierarchy of computer storage.
+     It is also sometimes called a semiconductor storage device,
+     a solid-state device or a solid-state disk, even though SSDs lack the physical spinning disks and movable read–write heads used in hard disk drives (HDDs) and floppy disks. SSD also has rich internal parallelism for data processing.
+    <br>
+    <br>
+3. M.2 is a form factor for SSDs (solid-state drives) that’s shaped like a stick of gum. These SSDs are generally faster but more expensive than traditional, 2.5-inch SSDs. </p></div>
+<div class="img-harddisk"><img src="/parts-info/img/hard disk.jpg" alt="img"></div>
 </div>
 <hr>
 <h1>What is a Fans</h1>
@@ -145,7 +167,7 @@
 <div><p>A computer fan is any fan inside, or attached to, a computer case used for active cooling. 
     Fans are used to draw cooler air into the case from the outside, expel warm air from inside and move air across 
     a heat sink to cool a particular component.</p></div>
-<div><img src="/parts-info/img/fan.png" alt="img"></div>
+<div class="img-fan"><img src="/parts-info/img/fan.png" alt="img"></div>
 </div>
 <hr>
 <h1>What is a Case</h1>
@@ -154,16 +176,17 @@
 <div><p>The computer case serves mainly as a way to physically mount and contain all the actual components inside 
     a computer, like the motherboard, hard drive, optical drive, floppy disk drive, etc. They typically come bundled 
     with a power supply.</p></div>
-<div><img src="/parts-info/img/kesa.png" alt="img"></div>
+<div class="img-case"><img src="/parts-info/img/kesa.png" alt="img"></div>
 </div>
 <hr>
 <h1>What is a Graphic Card</h1>
 <hr>
 <div class="content">
-<div><p>GPU stands for graphics processing unit. You'll also see GPUs commonly referred to as graphics cards 
+<div><p> if the cpu is the brain then the gpu is the computer eyes
+    GPU stands for graphics processing unit. You'll also see GPUs commonly referred to as graphics cards 
     or video cards. Every PC uses a GPU to render images, video and 2D or 3D animations for display. A GPU performs 
     quick math calculations and frees up the CPU to do other things.</p></div>
-<div><img src="/parts-info/img/Graphic-Card-PNG-Image.png" alt="img"></div>
+<div class="img-GraphicCard"><img src="/parts-info/img/Graphic-Card-PNG-Image.png" alt="img"></div>
 </div>
 <hr>
 <h1>What is a Power Supply</h1>
@@ -172,11 +195,11 @@
 <div><p>A power supply takes the AC from the wall outlet, converts it to unregulated DC, and reduces the voltage using 
     an input power transformer, typically stepping it down to the voltage required by the load. For safety reasons, 
     the transformer also separates the output power supply from the mains input.</p></div>
-<div><img src="/parts-info/img/power supply.png" alt="img"></div>
+<div class="img-powersupply"><img src="/parts-info/img/power supply.png" alt="img"></div>
 </div>
 </main>
 <footer>
-    <div><img class="logo" src="/parts-info/s.png" alt="logo"></div>
+    <div><img class="logo" src="/s.png" alt="logo"></div>
     <div>
         <ol>
             <li class="title">CATEGORIES</li>
@@ -200,8 +223,8 @@
         <ol>
             <li class="title">COMPANY</li>
             <hr>
-            <li class="sub-title"><a href="#">About</a></li>
-            <li class="sub-title"><a href="#">Contact & Imprint</a></li>
+            <li class="sub-title"><a href="/about">About</a></li>
+            <li class="sub-title"><a href="/contact">Contact us</a></li>
             <li class="sub-title"><a href="#">Terms of Service</a></li>
             <li class="sub-title"><a href="#">User Code of Conduct</a></li>
             <li class="sub-title"><a href="#">Industry Code of Conduct</a></li>
@@ -211,6 +234,6 @@
         </ol>
     </div>
 </footer>
-</div>
+</div>>
 </body>
 </html>

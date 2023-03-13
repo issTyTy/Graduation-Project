@@ -1,25 +1,28 @@
 body{
-    margin: 0;
-    padding: 0s;
-    }
-    .logo {
-        width: 200px;
-    }
-    .nav3 li ,a{
-    color: white;
-    text-decoration: none;
-    font-size: medium;
-    display: inline-block;
-    margin: 5px;
-    }
+margin: 0;
+padding: 0s;
+}
+.logo {
+    width: 120px;
+}
+.nav1 li ,a{
+color: white;
+text-decoration: none;
+font-size: medium;
+
+}
+.nav1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(5, 5, 54);
     
-    nav li :hover{
-        color: rgb(194, 138, 17);
-    }
-    header{
-        display: grid;
-        grid-template-columns:18vw 1fr 0.3fr;
-        background-color: black;
-        align-items: center; 
-        height: 108px;
-    }
+}
+nav li{
+    display: inline-block;
+    list-style: none;
+    padding-right: 10px;
+}
+nav li :hover{
+    color: rgb(194, 138, 17);
+}
