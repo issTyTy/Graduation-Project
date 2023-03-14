@@ -1,3 +1,7 @@
+if(process.env.NODE_ENV !== "production") {
+require("dotenv").config()
+}
+
 // Importing Libraies installed using npm
 
 const express = require("express");
@@ -7,19 +11,45 @@ const bcrypt = require("bcrypt");
 const passport = require("passport");
 const initializePassport = require("./passport-config");
 const port = 4000;
+const flash = (require("express-flash"))
+const session = (require("express-session"))
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.json());
 ``;
 app.use(express.static(path.join("public")));
 
+initializePassport(
+  passport,
+  email => users.find(user => user.email ===  email),
+  id => users.find(user =>user.if === id)
+  )
+
 const users = [];
 
 app.use(express.urlencoded({ extended: false }));
+app.use(flash())
+app.use(session({
+  secret: process.env.SECCRET_KEY,
+  resave: false, //we wont resave the session variable if nothig is changed
+  saveUninitialized: false
+}))
+app.use(passport.initialize())
+app.use(passport.session())
+
 
 app.get("/test", (req, res) => {
   res.json("ok");
 });
+
+//configuring the register post functionaltiy
+app.post("/login", passport.authenticate("local", {
+  successRedirect: "/",
+  failureRedirect: "/login",
+  failureFlash: true
+}))
+//configuring the register post functionaltiy
 
 app.post("/register", async (req, res) => {
   const { name, email, password } = req.body;

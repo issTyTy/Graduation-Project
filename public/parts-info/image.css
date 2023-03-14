@@ -24,3 +24,10 @@
 .img-GraphicCard img{
     width: 20vw;
 }
+.img-harddisk img{
+    width: 30vw;
+    margin-left: -40px;
+}
+.img-powersupply img{
+    width: 20vw;
+}

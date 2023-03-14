@@ -32,6 +32,13 @@
           <label class="form-label" for="form3Example4">Password</label>
           <input type="password" name="password" id="form3Example4" class="form-control" placeholder="Enter your Password" >
         </div>
+
+        <% if (messages.error) { %>
+          <div class="alert alert-danger">
+            <strong><%= messages.error %> </strong>
+          </div>
+        <% } %>
+        
 <!-- Submit button -->
 <button type="submit" class="btn btn-primary btn-block mb-4">
   Sign In

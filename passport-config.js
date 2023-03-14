@@ -8,7 +8,7 @@ function initialize(passport, getUserByEmail, getUserById){
         // Get users by email
         const user = getUserByEmail(email)
         if (user == null){
-            return done(null, false, {message: "No user found with that email"})
+            return done(null, false, {message: "whoops coudnt find this user"})
         }
         try {
             if(await bcrypt.compare(password, user.password)){

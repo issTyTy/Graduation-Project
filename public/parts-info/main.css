@@ -22,8 +22,8 @@ h1{
 }
 body{
     backdrop-filter:blur(15px);
-background-image: url(/img.jpg);
     background-size: cover;
     background-position: center;
+    background-color:#444444 ;
 
 }
