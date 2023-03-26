@@ -14,6 +14,13 @@ const flash = require("express-flash")
 const session = require("express-session")
 const methodOverride = require("method-override")
 
+// MongoDB/////////////////////
+// const mongoose = require("mongoose")
+// mongoose.connect("mongodb://localhost:27017/my_app.register", mongoose.set('strictQuery', false), (err) => {
+//     if (!err) console.log('db connected');
+// })
+
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.json());
@@ -85,53 +92,15 @@ app.get('/info', checkAuthenticated, (req, res) => {
 app.get("/test", (req, res) => {
     res.render("ok");
 });
-app.get("/products/cpu/", (req, res) => {
-    res.render("Cpu");
-});
-app.get("/products/cpu-cooler/", (req, res) => {
-    res.render("Cpu Cooler");
-});
-app.get("/products/motherboard/", (req, res) => {
-    res.render("Motherboards");
-});
-app.get("/products/memory/", (req, res) => {
-    res.render("Memory");
-});
-app.get("/products/internal-hard-drive/", (req, res) => {
-    res.render("Storage");
-});
-app.get("/products/video-card/", (req, res) => {
-    res.render("Video Card");
-});
-app.get("/products/case/", (req, res) => {
-    res.render("Cases");
-});
-app.get("/products/power-supply/", (req, res) => {
-    res.render("Power Supply");
-});
-app.get("/products/os/", (req, res) => {
-    res.render("Operating System");
-});
-app.get("/products/monitor/", (req, res) => {
-    res.render("Monitor");
-});
 app.get("/about", (req, res) => {
     res.render("about");
 });
 app.get("/contact", (req, res) => {
     res.render("contact");
 });
-// app.get("/info", (req, res) => {
-//     res.render("partsinfo.ejs");
-// });
 
   // End Routes
 
-
-// app.delete('/logout', (req, res) => {
-//     req.logOut()
-//     res.redirect('/login')
-//   })
 
 app.delete("/logout", (req, res) => {
     req.logout(req.user, err => {

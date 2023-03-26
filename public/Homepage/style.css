@@ -1,76 +1,83 @@
-/* Body styles */
-body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-}
-
-/* Header styles */
-header {
-	background-color: #333;
-	color: #fff;
+.nav1{
 	padding: 10px;
-	text-align: center;
-}
-
-/* Main styles */
-main {
-	display: flex;
-	flex-direction: column;
-	margin: 20px;
-}
-
-section {
-	margin-bottom: 20px;
-}
-
-h2 {
-	margin-top: 0;
-}
-
-label {
-	display: block;
-	font-weight: bold;
-	margin-bottom: 5px;
-}
-
-select {
-	padding: 5px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	width: 100%;
-}
-
-button[type="submit"] {
-	background-color: #333;
-	color: #fff;
-	padding: 10px;
+	display: grid;
+	grid-template-columns: 1fr auto ;
+	background-color: black;
+	}
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		background-color: #444444;
+		color:white;
+		
+	}
+	h3{
+		font-size: 50px;
+	}
+	.btn{
+		margin-top: 7px;
+	color:white;
+	height: 7vh;
+	padding: 0px 12px;
+	border-radius: 25px;
 	border: none;
-	border-radius: 3px;
+	background-color: orange;
+	font-size: 25px;
 	cursor: pointer;
-	margin-top: 10px;
-}
-
-button[type="submit"]:hover {
-	background-color: #555;
-}
-
-/* Footer styles */
-footer {
-	background-color: #333;
-	color: #fff;
-	padding: 10px;
-	text-align: center;
-}
-
-/* Media queries */
-@media (min-width: 768px) {
-	main {
-		flex-direction: row;
-		justify-content: space-between;
+	transition-duration: 0.5s;
 	}
-
-	section {
-		flex-basis: 48%;
+	.btn:hover{
+		background-color: white;
+		color: black;
 	}
-}
+	.btn:active{
+	opacity: 0.8;
+	}
+	
+	main{
+		margin: 50px 0px 150px 0px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		height: 60vh;
+		width: 100vw;
+		font-family: 'Caveat', cursive;
+	font-family: 'Edu NSW ACT Foundation', cursive;
+	
+	
+	}
+	h1{
+	
+		font-size: 50px;
+		
+	}
+	.logo img{
+		width: 25vh;
+	}
+	.hello{
+		margin-bottom: 15px;
+		margin-top: 20px;
+	}
+	.Welcome{
+		font-size: larger;
+	}
+	.about{
+		padding: 10px 20px;
+		border-radius: 10px;
+		border: none;
+		margin-top: 10px;
+		cursor: pointer;
+		font-size: 15px;
+	}
+	.about a{
+		text-decoration: none;
+		list-style: none;
+		color: black;
+		
+	}
+	.about:active{
+		opacity: 0.8;
+	}
