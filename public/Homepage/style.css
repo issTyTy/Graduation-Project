@@ -42,7 +42,7 @@
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
-		height: 60vh;
+		height: 100vh;
 		width: 100vw;
 		font-family: 'Caveat', cursive;
 	font-family: 'Edu NSW ACT Foundation', cursive;
@@ -78,6 +78,26 @@
 		color: black;
 		
 	}
+	.submit{
+		padding: 10px 20px;
+		border-radius: 10px;
+		border: none;
+		margin-top: 10px;
+		cursor: pointer;
+		font-size: 15px;
+		position: center;
+		
+	}
+	.submit a{
+		text-decoration: none;
+		list-style: none;
+		color: black;
+	}
+
 	.about:active{
+		opacity: 0.8;
+	}
+
+	.submit:active{
 		opacity: 0.8;
 	}

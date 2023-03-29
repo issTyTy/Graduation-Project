@@ -2,9 +2,10 @@ if (process.env.NODE_ENV !== "production") {
     require("dotenv").config()
 }
 
-
-// Importing Libraies that we installed using npm
 const express = require("express")
+const { ROLE, user } = require('./data')
+const { authUser, authRole } = require('./Auth')
+const projectRouter = require('./permissions/project')
 const app = express()
 const bcrypt = require("bcrypt") // Importing bcrypt package
 const passport = require("passport")
@@ -31,7 +32,6 @@ initializePassport(
     email => users.find(user => user.email === email),
     id => users.find(user => user.id === id)
     )
-
 
 
 const users = []
@@ -73,9 +73,29 @@ app.post("/register", checkNotAuthenticated, async (req, res) => {
         res.redirect("/register")
     }
 })
+
+function setUser(req, res, next) {
+    const userId = req.body.userId
+    if (userId) {
+    req.user = users.find(user => user.id === userId)
+    }
+    next()
+}
 // Routes
+app.get('/admin', authUser, authRole(ROLE.ADMIN), (req, res) => {
+    res.send('test')
+})
+
 app.get('/', checkAuthenticated, (req, res) => {
     res.render("index.ejs", {name: req.user.name})
+})
+
+app.get('/Forums', checkAuthenticated, (req, res) => {
+    res.render("Forums.ejs", {name: req.user.name})
+})
+
+app.get('/CYPP', checkAuthenticated, (req, res) => {
+    res.render("CYPP.ejs", {name: req.user.name})
 })
 
 app.get('/login', checkNotAuthenticated, (req, res) => {
@@ -89,15 +109,53 @@ app.get('/info', checkAuthenticated, (req, res) => {
         res.render("partsinfo.ejs", {name: req.user.name})
     })
 })
-app.get("/test", (req, res) => {
-    res.render("ok");
-});
+// app.get("/test", (req, res) => {
+//     res.render("test");
+// });
 app.get("/about", (req, res) => {
     res.render("about");
 });
 app.get("/contact", (req, res) => {
     res.render("contact");
 });
+
+// picker routs 
+app.get('/CPU', checkAuthenticated, (req, res) => {
+    res.render("PY_CPU.ejs", {name: req.user.name})
+})
+
+app.get('/Cooler', checkAuthenticated, (req, res) => {
+    res.render("PY_COOLER.ejs", {name: req.user.name})
+})
+
+app.get('/Motherboard', checkAuthenticated, (req, res) => {
+    res.render("PY_MB.ejs", {name: req.user.name})
+})
+
+app.get('/Memory', checkAuthenticated, (req, res) => {
+    res.render("PY_RAM.ejs", {name: req.user.name})
+})
+
+app.get('/Storage', checkAuthenticated, (req, res) => {
+    res.render("PY_STORAGE.ejs", {name: req.user.name})
+})
+
+app.get('/GPU', checkAuthenticated, (req, res) => {
+    res.render("PY_GPU.ejs", {name: req.user.name})
+})
+
+app.get('/Case', checkAuthenticated, (req, res) => {
+    res.render("PY_CASE.ejs", {name: req.user.name})
+})
+
+app.get('/PSU', checkAuthenticated, (req, res) => {
+    res.render("PY_PS.ejs", {name: req.user.name})
+})
+
+app.get('/Monitor', checkAuthenticated, (req, res) => {
+    res.render("PY_MONITOR.ejs", {name: req.user.name})
+})
+
 
   // End Routes
 
