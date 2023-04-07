@@ -2,15 +2,7 @@
 	padding: 10px;
 	display: grid;
 	grid-template-columns: 1fr auto ;
-<<<<<<< Updated upstream
-	background-color: rgb(51, 51, 51);
-=======
-<<<<<<< HEAD
 	background-color: rgb(255, 255, 255);
-=======
-	background-color: rgb(51, 51, 51);
->>>>>>> c35d9db275a0e49523c00abafd00570604c5683a
->>>>>>> Stashed changes
 	}
 	*{
 		padding: 0;
