@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="/addtocart/addtocart.css">
   <title>Product List</title>
   <link rel="stylesheet" type="text/css" href="/completed builds.css">
 </head>
@@ -23,53 +24,28 @@
                 <li class="lol"><a href="/Completed_Build"><button>Completed Build</button></a></li>
                 <li class="lol"><a href="/Forums"><button>Forums</button></a></li>
             </ul>
+            <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
           </div>
 </header>
-  <main>
-    <aside>
-      <h2>Filters</h2>
-      <fieldset>
-          <legend>MotherBoards</legend>
-          <li><input type="checkbox" name="department" value="Gigabyte"> Gigabyte</li> 
-          <li><input type="checkbox" name="department" value="MSI"> Msi</li>
-          <lu><input type="checkbox" name="department" value="Asus"> Asus</lu>
-          <li><input type="checkbox" name="department" value="Intel"> Intel</li>
-      </fieldset>
-      <fieldset>
-        <legend>GPU</legend>
-        <li><input type="checkbox" name="department" value="Nivida"> Nivida</li>
-        <li><input type="checkbox" name="department" value="AMD"> AMD</li>
-      </fieldset>
-      <fieldset>
-        <Legend>CPU</Legend>
-        <li><input type="checkbox" name="department" value="Intel"> Intel</li>
-        <li><input type="checkbox" name="department" value="Ryzen"> Ryzen</li>
-      </fieldset>
-      <fieldset>
-        <legend>Power Supply</legend>
-        <li><input type="checkbox" name="department" value="500W"> 500W</li>
-        <li><input type="checkbox" name="department" value="600W"> 600W</li>
-        <li><input type="checkbox" name="department" value="650W"> 650W</li>
-        <li><input type="checkbox" name="department" value="700W"> 700W</li>
-        <li><input type="checkbox" name="department" value="1000W"> 1000W</li>
-      </fieldset>
-        <fieldset>
-          <legend>Price Range</legend>
-          <li><input type="radio" name="price" value="1000-2500"> 1000 - 2500</li>
-          <li><input type="radio" name="price" value="2500-5000"> 2500 - 5000</li>
-          <li><input type="radio" name="price" value="5000-10000"> 5000 - 10000</li>
-          <li><input type="radio" name="price" value="10000-"> 10000+</li>
-        </fieldset>
-        <fieldset>
-          <legend>Rating</legend>
-          <li><input type="checkbox" name="rating" value="4"> 4 Stars &amp; Up</li>
-          <li><input type="checkbox" name="rating" value="3"> 3 Stars &amp; Up</li>
-          <li><input type="checkbox" name="rating" value="2"> 2 Stars &amp; Up</li>
-          <li><input type="checkbox" name="rating" value="1"> 1 Star &amp; Up</li>
-        </fieldset>
-        <button type="submit">Apply Filters</button>
-      </List>
-    </aside>
-  </main>
+<main>
+    <!-- <h1> pc , gaming , new </h1> -->
+    <div class="pc-g-n">
+
+            <img src="ryzen 3600.jpg" alt="" srcset="">
+        </div>
+        <div class="container">
+            <div id="root"></div>
+            <div class="sidebar">
+                <div class="head"><p>My Cart</p></div>
+                <div id="cartItem" , class="text">Your cart is empty</div>
+                <div class="foot">
+                    <h3 class="text">Total</h3>
+                    <h2 id="total">LE 0.00</h2>
+                </div
+            </div>
+        </div>
+    </main>
+        <script src="/addtocart/addtocart.js"></script>
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
 </body>
 </html>

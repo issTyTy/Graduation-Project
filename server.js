@@ -70,7 +70,8 @@ app.post("/register", checkNotAuthenticated, async (req, res) => {
       password: hashedPassword,
     });
     // console.log(users); // Display newly registered in the console
-    res.redirect("/login");
+    
+    res.redirect("/");
   } catch (e) {
     console.log(e);
     res.redirect("/register");
