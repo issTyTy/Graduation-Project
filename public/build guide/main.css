@@ -1,0 +1,35 @@
+
+p, h1{
+    margin: 24px ;;
+    padding: 0;
+    color: white;
+}
+.content{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-column-gap:150px ;
+    justify-content: center;
+    color:white;
+    text-align: justify;
+}
+
+p{
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: auto;
+}
+h1{
+    padding-top: 10px;
+    color: white;
+
+}
+h2{
+    padding-left : 30px;
+    color: white;
+}
+body{
+    background-size: cover;
+    background-position: center;
+    background-color:#444444 ;
+
+}

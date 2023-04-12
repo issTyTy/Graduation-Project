@@ -37,13 +37,18 @@
         <main class="px-3">
 
           <h1 class="hello">Hello <%= name %>  </h1>
-          <p class="Welcome">Welcome to OverHead</p>
+          <p class="Welcome">
+            Welcome to OverHead
+            <br>
+            Please select what you plan to use your device for and what condition
+          </p>
           <a href="/about"><button class="about">Learn more</button></a>
 
           <br><br>
           <!-- select   -->
 
           <form name="form1" id="form1" action="/Select">
+            <div class="box">
             Platform: <select name="subject" id="subject">
               <option value="" selected="selected">Select a Platform</option>
             </select>
@@ -55,8 +60,9 @@
             Condition: <select name="chapter"  id="chapter" >
               <option value="" selected="selected">Please select a UseCase first</option>
             </select>
+          </div>
             <br><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" class="button-18" role="button">
 
           </form>
           
@@ -102,6 +108,8 @@ window.onload = function ()  {
   }
     
   }
+
+  
 
     </script>
         </main>

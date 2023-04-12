@@ -1,86 +1,81 @@
-
 <!doctype html>
 <html lang="en" class="">
-  <head>
-    <meta charset="utf-8">
-    <title>Forums</title>
-    <link rel="stylesheet" type="text/css" href="/Forums/comment.css">
-    <link rel="stylesheet" type="text/css" href="/Forums/home.css">
-<link rel="stylesheet" type="text/css" href="/Forums/nav2.css">
-    <link rel="stylesheet" type="text/css" href="/Forums/main-comment.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Edu+NSW+ACT+Foundation:wght@500&display=swap" rel="stylesheet">
-    </head>
-  <body>
-        <header>
-          <div class="nav1">
-            <div class="logo"><a href="/"><img src="/logo.png"></a></div>
-            <div><nav class="nav nav-masthead justify-content-center float-md-end">
-              <form action="/logout?_method=DELETE" method="POST">
-                <button class="btn" type="submit" >Logout</button>
-              </form>
-            </nav>
-            </div>
-          </div>
-            <div class="nav2">
-              <ul>
-                <!-- <li class="lol"><a href="/CYPP"><button>Builder</button></a></li> -->
-                <li class="lol"><a href="/Build-guide"><button>Build Guide</button></a></li>
-                <li class="lol"><a href="/Completed_Build"><button>Completed Build</button></a></li>
-                <li class="lol"><a href="/Forums"><button>Forums</button></a></li>
-            </ul>
-          </div>
-        </header>
-<main>
-  <div class="main-comment">
-    <h2>Title</h2>
-    <hr>
-    <div class="title-comment">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio facilis, unde architecto accusamus 
-        voluptatum aut dolorum laudantium dolores. Eaque quia non dolorum nesciunt, totam alias obcaecati ab tenetur 
-        unde enim?</p>
+<head>
+  <meta charset="utf-8">
+  <title>Forums</title>
+  <link rel="stylesheet" type="text/css" href="/Forums/_____OLD/comment.css">
+  <link rel="stylesheet" type="text/css" href="/Forums/_____OLD/home.css">
+  <link rel="stylesheet" type="text/css" href="/Forums/_____OLD/nav2.css">
+  <link rel="stylesheet" type="text/css" href="/Forums/_____OLD/main-comment.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Edu+NSW+ACT+Foundation:wght@500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="nav1">
+      <div class="logo"><a href="/"><img src="/logo.png"></a></div>
+      <div>
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+          <form action="/logout?_method=DELETE" method="POST">
+            <button class="btn" type="submit">Logout</button>
+          </form>
+        </nav>
+      </div>
     </div>
+    <div class="nav2">
+      <ul>
+        <!-- <li class="lol"><a href="/CYPP"><button>Builder</button></a></li> -->
+        <li class="lol"><a href="/Build-guide"><button>Build Guide</button></a></li>
+        <li class="lol"><a href="/Completed_Build"><button>Completed Build</button></a></li>
+        <li class="lol"><a href="/Forums"><button>Forums</button></a></li>
+      </ul>
     </div>
+  </header>
+  <main>
 
-  <div class="replay">
-
-        <div style="border: 1.5px solid white;">
-        <div class="username">username</div>
-        <div class="time">time</div>
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="" class="label1">Write a comment</label>
+          <br>
+          <textarea id="textarea2" rows="3" class="form-control"><%= name%>:</textarea>
         </div>
-
-        <div class="bullshit-talk">lol</div>
-        
+      </div>
+      <div class="col-md-12">
+        <button onclick="myFunction()" id="submitBtn" class="btn btn-primary float-right">Post comment</button>
 
       </div>
-      <div class="form">
-      <form action="">
-        <div class="content">
-        <div><input class="comment-title" type="text" placeholder="Title" maxlength="40"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12" id="container">
+      </div>
+    </div>
+    </div>
     </form>
-        <div class="comment-icon">
-            <button><img src="/Forums/Forum icons/1Bold.png"></button>
-            <button><img src="/Forums/Forum icons/2Italic.png"></button>
-            <button><img src="/Forums/Forum icons/3Underline.png"></button>
-            <div class="l">|</div>
-            <button><img src="/Forums/Forum icons/4Font size.png"></button>
-            <button><img src="/Forums/Forum icons/5Color.png"></button>
-            <button><img src="/Forums/Forum icons/6Youtube.png"></button>
-            <button><img src="/Forums/Forum icons/7Ordered list.png"></button>
-            <div class="l">|</div>
-            <button><img src="/Forums/Forum icons/8Align left.png"></button>               
-            <button><img src="/Forums/Forum icons/9Align center.png"></button>
-            <button><img src="/Forums/Forum icons/10Align right.png"></button>
-        </div>
-        <form action="">
-        <div><textarea placeholder="Message" class="field" maxlength="800"></textarea>
-            <button class="comment-post">Post</button></div>
-        </div>
-</form>
-        </div>
-</main>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-  </body>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
+  <script src="/Forums/js/app.js"></script>
+  <script>
+    function myFunction() {
+      let container = document.getElementById("container");
+      let div = document.createElement("div");
+      div.append(document.getElementById("textarea2").value);
+      container.append(div);
+
+    }
+
+
+  </script>
+</body>
+
 </html>
