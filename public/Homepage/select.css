@@ -51,8 +51,8 @@
   }
   
   .box select {
-    background-color: #0563af;
-    color: white;
+    background-color: #b5bac1;
+    color: black;
     padding: 12px;
     width: 310px;
     border: none;
@@ -91,11 +91,11 @@
 
 .button-18 {
   align-items: center;
-  background-color: #0A66C2;
+  background-color: #b5bac1;
   border: 0;
   border-radius: 100px;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #000000;
   cursor: pointer;
   display: inline-flex;
   font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -116,7 +116,8 @@
   user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
-  margin-left: 270px;
+  margin-left: 160px;
+  margin-top: 100px;
 }
 
 .button-18:hover,

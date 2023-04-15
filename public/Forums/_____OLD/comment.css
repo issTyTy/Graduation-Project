@@ -10,9 +10,9 @@
 }
 .form-control{
     margin-top: 10px;
-    margin-left: 400px;
-    width: 500px;
-    height: 100px;
+    margin-left: 50px;
+    width: 1200px;
+    height: 200px;
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
@@ -36,8 +36,8 @@
 }
 
 .label1{
-    margin-left: 755px;
-    width: 95%;
+    margin-left: 554px;
+    width: 195%;
     padding: 0.5rem 1rem;
     outline: none;
     background-color: #363636;
