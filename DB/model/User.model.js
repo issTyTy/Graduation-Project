@@ -15,11 +15,7 @@ const userSchema = new Schema({
         required: true
     },
     age: Number,
-    gender: {
-        type: String,
-        default: 'Male',
-        enum: ['Male', 'Female']
-    },
+    
     confirmEmail: {
         type: Boolean,
         default: false

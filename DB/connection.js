@@ -8,5 +8,4 @@ const connectDB = async () => {
         }).catch(err => console.log(`Fail to connect on DB  ,,,,,,,,,,,,,,,,,,,,,,,, ${err}`))
 }
 
-
 export default connectDB
