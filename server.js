@@ -20,20 +20,23 @@ app.use(express.static("public"));
 app.use(express.json());
 ``;
 
+
 initializePassport(
   passport,
-  (email) => users.find((user) => user.email === email),
-  (id) => users.find((user) => user.id === id)
+  (email) => arr.find((user) => user.email === email),
+  (id) => arr.find((user) => user.id === id)
 );
 
-const users = [
-  {
-    id: "1680832174162",
-    name: "tester",
-    email: "a@a",
-    password: "$2b$10$5xwGupjQ5Uq53gRmSvdqJOxreS2x5Bx2WVWIG1RTSvbkRv1A4KpNe",
-  },
-];
+const users = require("./DB/User.js")
+//const users = [
+//  {
+//    id: "1680832174162",
+//    name: "tester",
+//    email: "a@a",
+//    password: "$2b$10$5xwGupjQ5Uq53gRmSvdqJOxreS2x5Bx2WVWIG1RTSvbkRv1A4KpNe",
+//  },
+//];
+const arr = [users]
 
 app.use(express.urlencoded({ extended: false }));
 app.use(flash());
@@ -63,22 +66,22 @@ app.post(
 app.post("/register", checkNotAuthenticated, async (req, res) => {
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
-    users.push({
+    arr.push({
       id: Date.now().toString(),
       name: req.body.name,
       email: req.body.email,
       password: hashedPassword,
     });
-    // console.log(users); // Display newly registered in the console
+    console.log(users); // Display newly registered in the console
     
     res.redirect("/");
   } catch (e) {
     console.log(e);
     res.redirect("/register");
   }
-});
 
-function setUser(req, res, next) {
+}); function setUser(req, res, next) {
+
   const userId = req.body.userId;
   if (userId) {
     req.user = users.find((user) => user.id === userId);
