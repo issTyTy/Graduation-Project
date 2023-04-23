@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
-const { authUser } = require('../Auth');
 
-mongoose.connect('mongodb+srv://Gloomy:c0tt0nc4ndie@cluster1.0v9ll5u.mongodb.net/test'
+const User = require('./model/UserSchema');
+
+mongoose.connect('mongodb+srv://Gloomy:c0tt0nc4ndie@cluster1.0v9ll5u.mongodb.net/Users?retryWrites=true&w=majority'
 ).then (() =>{
     console.log('Database connected!')
 }).catch(() =>{
@@ -10,17 +11,20 @@ mongoose.connect('mongodb+srv://Gloomy:c0tt0nc4ndie@cluster1.0v9ll5u.mongodb.net
 
 const newUser = async(req,res,next) =>{
     
-    const authUser = newUser();
-    const newUser = new arr({
+
+    const newUser = new User({
        name: req.body.name,
        email: req.body.email,
-       password: req.body.password    
+       password: hashedPassword 
    });
-
-    const result = await newUser.save();
-
-
-res.json(newUser);
+   
+   try {
+       const result = userdb.collection('Users').save();
+    } catch(error) {
+        res.json({message: 'could not save user inputs.'})
+    }
+    
+    await newUser.save();
 
 }
 
@@ -28,7 +32,7 @@ res.json(newUser);
 const getUser = async(req, res, next) =>{
 
     try{
-        const result = userdb.collection('users').find().toArray();
+        const result = userdb.collection('Users').find().toArray();
     } catch(error) {
         res.json({message: 'could not find required data.'})
     }

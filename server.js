@@ -1,7 +1,7 @@
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
-
+const User = require('./DB/model/UserSchema.js')
 const express = require("express");
 const { ROLE, user } = require("./data");
 const { authUser, authRole } = require("./Auth");
@@ -14,7 +14,6 @@ const port = 4000;
 const flash = require("express-flash");
 const session = require("express-session");
 const methodOverride = require("method-override");
-
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.json());
@@ -27,7 +26,7 @@ initializePassport(
   (id) => arr.find((user) => user.id === id)
 );
 
-const users = require("./DB/User.js")
+const users = require("./DB/User.js");
 //const users = [
 //  {
 //    id: "1680832174162",
@@ -72,13 +71,22 @@ app.post("/register", checkNotAuthenticated, async (req, res) => {
       email: req.body.email,
       password: hashedPassword,
     });
-    console.log(users); // Display newly registered in the console
-    
-    res.redirect("/");
-  } catch (e) {
-    console.log(e);
-    res.redirect("/register");
-  }
+  
+    const newUser = new User({ 
+      name: req.body.name,
+      email: req.body.email,
+      password: hashedPassword
+  })
+  
+  await newUser.save();
+
+  console.log(newUser); // Display newly registered in the console
+  
+  res.redirect("/");
+} catch (e) {
+  console.log(e);
+  res.redirect("/register");
+} 
 
 }); function setUser(req, res, next) {
 

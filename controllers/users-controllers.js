@@ -1,11 +1,17 @@
 
 const mongoose = require('mongoose');
 
-const Users = require('../DB/model/UserSchema');
+const User = require('/DB/model/UserSchema');
 
 const express = require ('express');
-const { name } = require('ejs');
+const UserSchema = require('../DB/model/UserSchema');
 
+mongoose.connect('mongodb+srv://Gloomy:c0tt0nc4ndie@cluster1.0v9ll5u.mongodb.net/Users?retryWrites=true&w=majority'
+).then (() => {
+    res,json({message: 'Database connected!'})
+}).catch(() =>{
+    res.json({message: 'Database failed to connect!'})
+});
 
 const register = async (req, res, next) => {
     const errors = VaidationResult(req);
@@ -17,26 +23,21 @@ const register = async (req, res, next) => {
     
     let existingUser
     try {
-        existingUser = await Users.findOne({ email: email })
+        existingUser = await User.findOne({ email: email })
     } catch(error) {
-        console.log('Email already exists, try a different email.')
+        res.json({message: 'Email already exists, try a different email.'})
     }
     if(existingUser) {
-        console.log('Email is in use')
+        res.json({message: 'Email already in use'})
     }
-    
-    const createdUser = new Users({
-        name,
-        email,
-        password,
-    });
     
     try {
       await createdUser.save();
     } catch(error) {
-        console.log('register was unsuccessful')
-
+        res.json({message: 'Register was unsuccessful'})
     }
-    res.status(201).json({ Users: createdUser.toObject({ getters: true })}); //Getters removes the underscore in front of the created id
+    res.json({ Users: createdUser.toObject({ getters: true })}); //Getters removes the created id granting better accessability
     
+    exports.register = register;
+    exports.login = login;
 }
