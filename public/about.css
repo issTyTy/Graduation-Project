@@ -1,11 +1,10 @@
 
 *{
-    padding: 20px;
-    margin: 20px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
-    background: rgb(84,82,124);
-    background: linear-gradient(90deg, rgba(84,82,124,1) 0%, rgb(74 68 55) 100%);
+    
 }
 .about{
     width: 100%;

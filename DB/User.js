@@ -11,9 +11,9 @@ mongoose.connect('mongodb+srv://Gloomy:c0tt0nc4ndie@cluster1.0v9ll5u.mongodb.net
 
 const newUser = async(req,res,next) =>{
     
-
     const newUser = new User({
-       name: req.body.name,
+       id: req.body.id,
+        name: req.body.name,
        email: req.body.email,
        password: hashedPassword 
    });

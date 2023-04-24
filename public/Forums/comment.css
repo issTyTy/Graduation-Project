@@ -10,9 +10,6 @@
     flex-direction: column;
     overflow: hidden;
 }
-.btn{
-    align-items: center;
-}
 .comment-title{
     width: 95%;
     padding: 0.5rem 1rem;
