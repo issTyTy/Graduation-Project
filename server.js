@@ -67,7 +67,9 @@ app.post("/register", checkNotAuthenticated, async (req, res) => {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
     arr.push({
       id: Date.now().toString(),
-      newUser
+      name: req.body.name,
+      email: req.body.email,
+      password: hashedPassword,
     });
   
     const newUser = new User({ 
