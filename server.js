@@ -1,12 +1,7 @@
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
-
-require(
-  './DB/User.js',
-  './DB/model/UserSchema.js',
-  './DB/controllers/users-controllers.js'
-)
+const User = require('./DB/model/UserSchema.js')
 const express = require("express");
 const { ROLE, user } = require("./data");
 const { authUser, authRole } = require("./Auth");
@@ -32,7 +27,6 @@ initializePassport(
 );
 
 const users = require("./DB/User.js");
-const { name } = require("ejs");
 //const users = [
 //  {
 //    id: "1680832174162",
@@ -71,16 +65,20 @@ app.post(
 app.post("/register", checkNotAuthenticated, async (req, res) => {
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
- 
-    arr.push( newUser({
-      id: req.body.id,
+    arr.push({
+      id: Date.now().toString(),
+      newUser
+    });
+  
+    const newUser = new User({ 
+      id: Date.now().toString(),
       name: req.body.name,
       email: req.body.email,
       password: hashedPassword
+  })
 
-    })
-    );
-  
+  await newUser.save();
+
   console.log(newUser); // Display newly registered in the console
   
   res.redirect("/");
