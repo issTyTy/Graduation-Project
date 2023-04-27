@@ -9,7 +9,7 @@ const projectRouter = require("./permissions/project");
 const app = express();
 const bcrypt = require("bcrypt"); // Importing bcrypt package
 const passport = require("passport");
-const initializePassport = require("./passport-config");
+require("./passport-config");
 const port = 4000;
 const flash = require("express-flash");
 const session = require("express-session");
@@ -17,15 +17,17 @@ const methodOverride = require("method-override");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.json());
-``;
-
-
-initializePassport(
-  passport,
-  (email) => arr.find((user) => user.email === email),
-  (id) => arr.find((user) => user.id === id)
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+  })
 );
-
+app.use(passport.initialize());
+app.use(passport.session());
+/*
+*/
 const users = require("./DB/User.js");
 //const users = [
 //  {
@@ -36,60 +38,27 @@ const users = require("./DB/User.js");
 //  },
 //];
 const arr = [users]
-
 app.use(express.urlencoded({ extended: false }));
 app.use(flash());
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    resave: false, // We wont resave the session variable if nothing is changed
-    saveUninitialized: false,
-  })
-);
-app.use(passport.initialize());
-app.use(passport.session());
 app.use(methodOverride("_method"));
-
 // Configuring the register post functionality
 app.post(
   "/login",
-  checkNotAuthenticated,
-  passport.authenticate("local", {
-    successRedirect: "/",
+  passport.authenticate("local-login", {
+    successRedirect: "/register",
     failureRedirect: "/login",
     failureFlash: true,
   })
 );
 
 // Configuring the register post functionality
-app.post("/register", checkNotAuthenticated, async (req, res) => {
-  try {
-    const hashedPassword = await bcrypt.hash(req.body.password, 10);
-    arr.push({
-      id: Date.now().toString(),
-      name: req.body.name,
-      email: req.body.email,
-      password: hashedPassword,
-    });
-  
-    const newUser = new User({ 
-      id: Date.now().toString(),
-      name: req.body.name,
-      email: req.body.email,
-      password: hashedPassword
-  })
+app.post("/register", passport.authenticate('local-signup', {
+  successRedirect : '/', // redirect to the secure profile section
+  failureRedirect : '/register', // redirect back to the signup page if there is an error
+  failureFlash : true // allow flash messages
+}))
 
-  await newUser.save();
-
-  console.log(newUser); // Display newly registered in the console
-  
-  res.redirect("/");
-} catch (e) {
-  console.log(e);
-  res.redirect("/register");
-} 
-
-}); function setUser(req, res, next) {
+function setUser(req, res, next) {
 
   const userId = req.body.userId;
   if (userId) {

@@ -6,7 +6,7 @@ const newUser = User;
 const express = require ('express');
 const UserSchema = require('../DB/model/UserSchema');
 
-mongoose.connect('mongodb+srv://Gloomy:c0tt0nc4ndie@cluster1.0v9ll5u.mongodb.net/Users?retryWrites=true&w=majority'
+mongoose.connect('mongodb+srv://TyTy:mody2000@cluster0.hwyb70a.mongodb.net/project'
 ).then (() => {
     res,json({message: 'Database connected!'})
 }).catch(() =>{
