@@ -1,11 +1,3 @@
 .pc-g-u {
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    height: 110px;
-    align-content: flex-start;
-    flex-wrap: wrap;
+    text-align: center;
 }
