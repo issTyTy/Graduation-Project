@@ -10,7 +10,7 @@
 	}
 	body{
 		background: rgb(84,82,124);
-		background: linear-gradient(90deg, rgba(84,82,124,1) 0%, rgba(255,169,0,1) 100%);
+		background: linear-gradient(90deg, rgb(93 91 141) 0%, rgb(157 147 126) 100%);
 	}
 	h3{
 		font-size: 50px;
