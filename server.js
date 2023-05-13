@@ -79,6 +79,11 @@ app.get("/Completed_Build", checkAuthenticated, (req, res) => {
   res.render("completed builds.ejs", { name: req.user.name });
 });
 
+    // x = (app.get("/Completed_Build", checkAuthenticated, (req, res) => {
+    // res.render("completed builds.ejs", { name: req.user.name });
+    // }));
+    // console.log(x);
+
 app.get("/Forums", checkAuthenticated, (req, res) => {
   res.render("Forums.ejs", { name: req.user.name });
 });
