@@ -11,7 +11,7 @@
 	body{
 		background-color: #444444;
 		color:white;
-		
+		margin-bottom: 350px;
 	}
 	h3{
 		font-size: 50px;
@@ -140,4 +140,75 @@ img{
     width: 300px;
     height: 200px;
 
+}
+.contaner{
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+.table{
+	background-color: white;
+	border-radius: 20px;
+	overflow: hidden;
+	transition-delay: 5s;
+}
+.table-1{
+	display: grid;
+	grid-template-areas: "one two"
+						"there four" ;
+	background-color: white;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.pop-up{
+	position: absolute;
+	right: 20px;
+	top:10px;
+	display: none;
+}
+.pop-up img{
+	width: 700px;
+	height: 500px;
+}
+.table:hover .pop-up{
+	transition-delay: 5s;
+	display: block;
+	
+}
+.table-1{
+	background-color: white;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.table-3{
+	background-color: white;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.table-3:hover .pop-up-2{
+	transition-delay: 5s;
+	display: block;
+	
+}
+.table-1:hover .pop-up{
+	transition-delay: 5s;
+	display: block;
+	
+}
+.table-3 img{
+	width: 300px;
+	height: 250px;
+}
+.pop-up-2{
+	position: absolute;
+	right: 20px;
+	top:10px;
+	display: none;
+}
+.pop-up-2 img{
+	width: 700px;
+	height: 500px;
+}
+p{
+	font-size: 20px;
 }

@@ -104,3 +104,17 @@
     .right ul{
         display: flex;
     }
+	.pc-g-u{
+		display: flex;
+		justify-content: center;
+	}
+	.iteam img{
+		width: 20vw;
+	}
+	.iteam {
+	border:1px solid goldenrod;
+	border-radius: 50px;
+    padding: 50px;
+	height: 40vh;
+	align-items: center;
+	}
