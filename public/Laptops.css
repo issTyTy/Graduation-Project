@@ -51,6 +51,7 @@
 	}
 	.nav2 button{
 		transition: auto;
+		text-align: center;
 		height:70px;
         font-weight: 700;
         font-size: large;
