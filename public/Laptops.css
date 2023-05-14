@@ -117,7 +117,34 @@
 			box-shadow:0 1px 8px rgba(0,0,0,0.5);
 			display:none;
 		}
+		.tooltip {
+			display:inline-block;
+			position:relative;
+			border-bottom:1px dotted #666;
+			text-align:left;
+		}
 		
+		.tooltip h3 {margin:12px 0;}
+		
+		.tooltip .top {
+			min-width:200px;
+			max-width:900px;
+			width: 300px;
+			top:-20px;
+			left:50%;
+			transform:translate(-30%,-100%);
+			padding:10px 20px;
+			color:#000000;
+			background-color:#d8dc00;
+			font-weight:normal;
+			font-size:14px;
+			border-radius:8px;
+			position:absolute;
+			z-index:99999999;
+			box-sizing:border-box;
+			box-shadow:0 1px 8px rgba(0,0,0,0.5);
+			display:none;
+		}
 		.tooltip:hover .top {
 			display:block;
 		}
