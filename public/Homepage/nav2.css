@@ -1,17 +1,16 @@
 .nav2{
-    
-    background-color: rgb(32, 32, 32);
     display: flex;
     justify-content: space-between;
+    background: linear-gradient(360deg, rgb(136 129 130) 0%, rgb(119 114 134) 100%);
 }
 .nav2 button{
-    padding: 20px;
+    padding: 25px;
     font-weight: 700;
     font-size: large;
-    color: white;
-    background-color: rgb(32, 32, 32);
     margin-right: -5px;
     border: 1px;
+    background: center;
+    opacity: 186;
 }
 .right ul{
     list-style: none;

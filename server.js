@@ -79,6 +79,11 @@ app.get("/Completed_Build", checkAuthenticated, (req, res) => {
   res.render("completed builds.ejs", { name: req.user.name });
 });
 
+    // x = (app.get("/Completed_Build", checkAuthenticated, (req, res) => {
+    // res.render("completed builds.ejs", { name: req.user.name });
+    // }));
+    // console.log(x);
+
 app.get("/Forums", checkAuthenticated, (req, res) => {
   res.render("Forums.ejs", { name: req.user.name });
 });
@@ -106,23 +111,23 @@ else if(req.query.subject === "PC" &&   req.query.topic === "Gaming" && req.quer
     res.render("Pc-p-n.ejs", { name: req.user.name });
   }
   // Laptop
-  else if (req.query.subject === "laptop" &&   req.query.topic === "Gaming" && req.query.chapter === "New"  ) {
-    res.render("laptop-g-n.ejs", { name: req.user.name });
+  else if (req.query.subject === "Laptop" &&   req.query.topic === "Gaming" && req.query.chapter === "New"  ) {
+    res.render("Laptop-g-n.ejs", { name: req.user.name });
   } 
-else if(req.query.subject === "laptop" &&   req.query.topic === "Gaming" && req.query.chapter === "Used") {
-    res.render("laptop-g-u.ejs", { name: req.user.name });
+else if(req.query.subject === "Laptop" &&   req.query.topic === "Gaming" && req.query.chapter === "Used") {
+    res.render("Laptop-g-u.ejs", { name: req.user.name });
   }
-  else if(req.query.subject === "laptop" &&   req.query.topic === "Rendering" && req.query.chapter === "Used") {
-    res.render("laptop-r-u.ejs", { name: req.user.name });
+  else if(req.query.subject === "Laptop" &&   req.query.topic === "Rendering" && req.query.chapter === "Used") {
+    res.render("Laptop-r-u.ejs", { name: req.user.name });
   }
-  else if(req.query.subject === "laptop" &&   req.query.topic === "Rendering" && req.query.chapter === "New") {
-    res.render("laptop-r-n.ejs", { name: req.user.name });
+  else if(req.query.subject === "Laptop" &&   req.query.topic === "Rendering" && req.query.chapter === "New") {
+    res.render("Laptop-r-n.ejs", { name: req.user.name });
   }
-  else if(req.query.subject === "laptop" &&   req.query.topic === "producing" && req.query.chapter === "Used") {
-    res.render("laptop-p-u.ejs", { name: req.user.name });
+  else if(req.query.subject === "Laptop" &&   req.query.topic === "producing" && req.query.chapter === "Used") {
+    res.render("Laptop-p-u.ejs", { name: req.user.name });
   }
-  else if(req.query.subject === "laptop" &&   req.query.topic === "producing" && req.query.chapter === "New") {
-    res.render("laptop-p-n.ejs", { name: req.user.name });
+  else if(req.query.subject === "Laptop" &&   req.query.topic === "producing" && req.query.chapter === "New") {
+    res.render("Laptop-p-n.ejs", { name: req.user.name });
   }
   
 //   console.log(req.query.subject);
