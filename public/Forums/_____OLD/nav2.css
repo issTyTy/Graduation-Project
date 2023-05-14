@@ -1,15 +1,13 @@
 .nav2{
-    
-    background-color: gray;
     display: flex;
     justify-content: space-between;
+    opacity: 50%;
+    background: linear-gradient(280deg, rgb(136 129 130) 0%, rgb(119 114 134) 100%);
 }
 .nav2 button{
     padding: 20px;
     font-weight: 700;
     font-size: large;
-    color: white;
-    background-color: gray;
     margin-right: -5px;
     border: 1px;
 }

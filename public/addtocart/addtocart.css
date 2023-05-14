@@ -187,10 +187,9 @@ button{
     position: relative;
     border: none;
     border-radius: 5px;
-    background-color: goldenrod;
+    background-color: #c0baaa;
     padding: 7px 25px;
     cursor: pointer;
-    color: white;
 }
 button:hover{
     background-color: #333;

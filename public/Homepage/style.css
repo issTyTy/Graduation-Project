@@ -14,7 +14,7 @@
 		font-size: 50px;
 	}
 	.btn{
-		height: 5vh;
+		height: 6vh;
 		padding: 8px 13px;
 		border-radius: 25px;
 		border: none;
@@ -22,7 +22,7 @@
 		cursor: pointer;
 		transition-duration: 0.5s;
 		position: relative;
-		top: 137px;
+		top: 119px;
 		opacity: 52%;
 	}
 	.btn:hover{

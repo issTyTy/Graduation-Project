@@ -1,15 +1,11 @@
 .nav1{
 	display: grid;
 	grid-template-columns: 1fr auto;
-	background-color: rgb(255, 255, 255);
 	}
 *{
     margin: 1px;
 }
-body{
-    background-color: #444444;
-    color:white;
-}
+body{background: linear-gradient(360deg, rgb(93 91 141) 0%, rgb(157 147 126) 100%);}
 .btn{
     margin-top: 7px;
 color:white;
@@ -44,5 +40,5 @@ h1{
     
 }
 .logo img{
-    width: 25vh;
+    width: 10vh;
 }

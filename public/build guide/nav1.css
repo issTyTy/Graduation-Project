@@ -48,18 +48,7 @@ nav li :hover{
   background-color: black; /* Green */
   color: white;
 }
-.btn{
-height: 5vh;
-		padding: 8px 13px;
-		border-radius: 25px;
-		border: none;
-		font-size: 26px;
-		cursor: pointer;
-		transition-duration: 0.5s;
-		position: relative;
-		top: 137px;
-		opacity: 52%;
-}
+.btn{height: 5vh;padding: 8px 13px;border-radius: 25px;border: none;font-size: 26px;cursor: pointer;transition-duration: 0.5s;position: relative;top: 95px;opacity: 52%;}
 .btn:hover{
     background-color: white;
     color: black;

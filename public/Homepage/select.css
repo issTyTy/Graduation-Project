@@ -8,16 +8,20 @@
   }
   
   .box select {
-    background-color: #b5bac1;
+    background-color: #888083;
     color: black;
     padding: 12px;
     width: 310px;
     border: none;
     font-size: 20px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
     appearance: button;
     outline: none;
     background: border-box;
+  }
+  .box select option {
+    background: #888083;
   }
   
   
@@ -55,6 +59,7 @@
   padding-right: 30px;
   text-align: center;
   touch-action: manipulation;
+  user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
   margin-left: 160px;
