@@ -1,30 +1,29 @@
 	.nav1{
+		opacity: 81;
 		padding: 10px;
 		display: grid;
-		grid-template-columns: 1fr auto ;
-		background-color: rgb(255, 255, 255);
+		grid-template-columns: 1fr auto;
 	}
-	*{	
+	*{
 		font-size: 17px;
 	}
 	body{
-		background: rgb(84,82,124);
-		background: linear-gradient(90deg, rgb(93 91 141) 0%, rgb(157 147 126) 100%);
+		background: linear-gradient(360deg, rgb(93 91 141) 0%, rgb(157 147 126) 100%);
 	}
 	h3{
 		font-size: 50px;
 	}
 	.btn{
-		/* margin-top: 7px; */
-		color: white;
-		height: 7vh;
-		padding: 1px 10px;
+		height: 5vh;
+		padding: 8px 13px;
 		border-radius: 25px;
 		border: none;
-		background-color: rgb(0 0 0);
-		font-size: 25px;
+		font-size: 26px;
 		cursor: pointer;
 		transition-duration: 0.5s;
+		position: relative;
+		top: 123px;
+		opacity: 52%;
 	}
 	.btn:hover{
 		background-color: white;
@@ -41,6 +40,7 @@
 		flex-direction: column;
 		align-items: center;
 		height: 100vh;
+		-webkit-box-align: center;
 	}
 	h1{
 	
@@ -48,7 +48,7 @@
 		
 	}
 	.logo img{
-		width: 18vh;
+		width: 10vh;
 	}
 	.hello{
 		margin-bottom: 15px;
