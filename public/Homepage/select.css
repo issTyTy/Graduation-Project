@@ -22,6 +22,7 @@
   }
   .box select option {
     background: #888083;
+    backdrop-filter: 20px;
   }
   
   
